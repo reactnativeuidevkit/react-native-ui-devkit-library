@@ -1,0 +1,9 @@
+<resources>
+    <color name="primary_dark">#f0f0f0</color>
+    <color name="primary">#f0f0f0</color>
+    <color name="text">#000000</color>
+    <color name="alert_background">#f0f0f0</color>
+    <color name="alert_text">#000000</color>
+    <color name="alert_button_text">#000000</color>
+    <color name="ic_launcher_background">#f0f0f0</color>
+</resources>

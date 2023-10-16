@@ -1,0 +1,24 @@
+diff --git a/node_modules/react-native-navbar-color/android/build.gradle b/node_modules/react-native-navbar-color/android/build.gradle
+index 709bec2..6e2ef15 100644
+--- a/node_modules/react-native-navbar-color/android/build.gradle
++++ b/node_modules/react-native-navbar-color/android/build.gradle
+@@ -1,7 +1,7 @@
+ apply plugin: 'com.android.library'
+ 
+ android {
+-    compileSdkVersion 23
++    compileSdkVersion 30
+     buildToolsVersion "25.0.0"
+ 
+     defaultConfig {
+@@ -13,5 +13,8 @@ android {
+ }
+ 
+ dependencies {
+-    compile "com.facebook.react:react-native:+" 
++    implementation fileTree(dir: "libs", include: ["*.jar"])
++
++    //noinspection GradleDynamicVersion
++    implementation "com.facebook.react:react-native:+"  // From node_modules
+ }
+\ No newline at end of file

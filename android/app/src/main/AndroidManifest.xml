@@ -1,0 +1,57 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+    android:name=".MainApplication"
+    android:label="@string/app_name"
+    android:icon="@mipmap/ic_launcher"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:allowBackup="false"
+    android:theme="@style/AppTheme"
+    android:launchMode="singleTop"
+    android:requestLegacyExternalStorage="true"
+    android:usesCleartextTraffic="true"
+    android:largeHeap="true">
+
+    <uses-library android:name="org.apache.http.legacy" android:required="false" />
+
+    <activity
+      android:name=".MainActivity"
+      android:launchMode="singleTask"
+      android:label="@string/app_name"
+      android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+      android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
+      android:exported="true"
+      android:screenOrientation="unspecified"
+      android:showWhenLocked="true"
+      android:turnScreenOn="true"
+    >
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+        <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="http" />
+        <data android:scheme="https" />
+        <data android:host="reactnativeuidevkit.com" />
+      </intent-filter>
+    </activity>
+    
+    <activity
+      android:name="com.rn.ui.devkit.library.CustomActivity"
+      android:showWhenLocked="true"
+      android:turnScreenOn="true"
+      android:launchMode="singleTop"
+      android:showOnLockScreen="true"
+    />
+    <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+    <activity android:name="com.ahmedadeltito.photoeditor.PhotoEditorActivity" />
+    <activity android:name="com.yalantis.ucrop.UCropActivity" />
+
+  </application>
+</manifest>
